@@ -13,44 +13,51 @@
 
 <body class="w-screen h-screen bg-[#FFEEAD] ">
 
-    <!-- Navbar -->
-    <nav class="w-full h-auto flex justify-around  bg-[#674636] md:fixed">
+      <!-- Header Start -->
+    <nav class="w-full h-auto flex justify-around  bg-[#674636]">
         <a href="index.html">
-            <div class="  logo w-24 md:w-28 md:invert-0 invert my-auto">
-                <img class="md:invert" src="assests/Logo/TT.png">
+            <div class="  logo w-24 md:w-28 md:invert-0 invert my-8">
+                <img class="md:invert mx-4" src="assests/Logo/TT.png">
             </div>
         </a>
 
-        <ul
-            class="md:flex py-5 my-auto text-[6px] text-center md:text-xs space-y-2 md:space-y-0 uppercase font-bold text-[#EEEEEE] md:space-x-10 ">
-            <a href="index.html">
-                <li class="hover:text-[#FFEEAD] cursor-pointer">Home</li>
-            </a>
-            <a href="courses.html">
-                <li class="hover:text-[#FFEEAD] cursor-pointer">Courses</li>
-            </a>
-            <a href="aboutus.html">
-                <li class="hover:text-[#FFEEAD] cursor-pointer">About</li>
-            </a>
-            <a href="form.html">
-                <li class="hover:text-[#FFEEAD] cursor-pointer">Contact</li>
-            </a>
-            <a href="help.html">
-                <li class="hover:text-[#FFEEAD] cursor-pointer">Help</li>
-            </a>
-        </ul>
+        <!-- Hamburger Menu -->
+        <div class="relative flex items-center justify-around p-4 bg-[#674636] w-full text-white">
 
-        <a href="applynow.html"><button
-                class="hover:bg-[#EEEEEE] hover:text-[#A66E38] h-10 space-x-3 md:flex my-8 rounded-lg p-2 px-4 uppercase text-xs font-extrabold text-[#EEEEEE]   bg-[#A66E38]">
-                <p class="my-auto md:text-[10px] text-[8px] ">apply now</p>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                    stroke="currentColor" class="md:size-5 my-auto   size-4">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
-                </svg>
 
-            </button></a>
+            <input type="checkbox" id="menu-toggle" class="peer hidden">
+            <label for="menu-toggle" class="block cursor-pointer mx-auto my-auto md:hidden">
+                <div class="w-6 h-0.5 bg-white mb-1"></div>
+                <div class="w-6 h-0.5 bg-white mb-1"></div>
+                <div class="w-6 h-0.5 bg-white mb-1"></div>
+            </label>
+
+            <!-- Menu Items -->
+            <nav
+                class="hidden peer-checked:block absolute top-full left-0 w-full mx-auto bg-[#674636] md:static md:w-fit md:flex md:space-x-6">
+                <ul class="flex flex-col p-4 md:flex-row md:space-x-6">
+                    <li><a href="index.html" class="block px-4 py-2 bg-[#674636]">Home</a></li>
+                    <li><a href="courses.html" class="block px-4 py-2 bg-[#674636]">Courses</a></li>
+                    <li><a href="aboutus.html" class="block px-4 py-2 bg-[#674636]">About</a></li>
+                    <li><a href="form.html" class="block px-4 py-2 bg-[#674636]">Contact</a></li>
+                    <li><a href="help.html" class="block px-4 py-2 bg-[#674636]">Help</a></li>
+                </ul>
+            </nav>
+
+
+
+            <a href="applynow.html"><button
+                    class="hover:bg-[#EEEEEE] hover:text-[#A66E38] h-10 space-x-3 md:flex my-8 rounded-lg p-2 px-4 uppercase text-xs font-extrabold text-[#EEEEEE]   bg-[#A66E38]">
+                    <p class="my-auto md:text-[10px] text-[8px] ">apply now</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="md:size-5 my-auto   size-4">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                    </svg>
+
+                </button></a>
     </nav>
-
+    <!-- Header end -->
     <!-- Main Body -->
     <div
         class="flex w-screen h-2/5 bg-[url(https://images.unsplash.com/photo-1667312939934-60fc3bfa4ec0?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)]  md:bg-[url('assests/main/page-header.jpg')] bg-cover bg-center place-content-center place-items-center  bg-no-repeat">
