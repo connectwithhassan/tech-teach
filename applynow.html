@@ -12,32 +12,51 @@
 
 <body class="w-screen h-screen bg-[#F7F7F7] ">
 
-    <!-- Navbar -->
-    <nav class="w-full h-auto flex justify-around  bg-[#674636] ">
-        <a href="index.html"><div class="  logo w-24 md:w-28 md:invert-0 invert my-auto">
-            <img class="md:invert" src="assests/Logo/TT.png">
-        </div></a>
+       <!-- Header Start -->
+    <nav class="w-full h-auto flex justify-around  bg-[#674636]">
+        <a href="index.html">
+            <div class="  logo w-24 md:w-28 md:invert-0 invert my-8">
+                <img class="md:invert mx-4" src="assests/Logo/TT.png">
+            </div>
+        </a>
 
-        <ul
-            class="md:flex py-5 my-auto text-[6px] text-center md:text-xs space-y-2 md:space-y-0 uppercase font-bold text-[#EEEEEE] md:space-x-10 ">
-            <a href="index.html"><li class="hover:text-[#FFEEAD] cursor-pointer">Home</li></a>
-            <a href="courses.html"><li class="hover:text-[#FFEEAD] cursor-pointer">Courses</li></a>   
-            <a href="aboutus.html"><li class="hover:text-[#FFEEAD] cursor-pointer">About</li></a>
-            <a href="form.html"><li class="hover:text-[#FFEEAD] cursor-pointer">Contact</li></a>
-            <a href="help.html"><li class="hover:text-[#FFEEAD] cursor-pointer">Help</li></a>
-        </ul>
+        <!-- Hamburger Menu -->
+        <div class="relative flex items-center justify-around p-4 bg-[#674636] w-full text-white">
 
-        <a href="applynow.html"><button
-            class="hover:bg-[#EEEEEE] hover:text-[#A66E38] h-10 space-x-3 md:flex my-8 rounded-lg p-2 px-4 uppercase text-xs font-extrabold text-[#EEEEEE]   bg-[#A66E38]">
-            <p class="my-auto md:text-[10px] text-[8px] ">apply now</p>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                stroke="currentColor" class="md:size-5 my-auto   size-4">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
-            </svg>
 
-        </button></a>
+            <input type="checkbox" id="menu-toggle" class="peer hidden">
+            <label for="menu-toggle" class="block cursor-pointer mx-auto my-auto md:hidden">
+                <div class="w-6 h-0.5 bg-white mb-1"></div>
+                <div class="w-6 h-0.5 bg-white mb-1"></div>
+                <div class="w-6 h-0.5 bg-white mb-1"></div>
+            </label>
+
+            <!-- Menu Items -->
+            <nav
+                class="hidden peer-checked:block absolute top-full left-0 w-full mx-auto bg-[#674636] md:static md:w-fit md:flex md:space-x-6">
+                <ul class="flex flex-col p-4 md:flex-row md:space-x-6">
+                    <li><a href="index.html" class="block px-4 py-2 bg-[#674636]">Home</a></li>
+                    <li><a href="courses.html" class="block px-4 py-2 bg-[#674636]">Courses</a></li>
+                    <li><a href="aboutus.html" class="block px-4 py-2 bg-[#674636]">About</a></li>
+                    <li><a href="form.html" class="block px-4 py-2 bg-[#674636]">Contact</a></li>
+                    <li><a href="help.html" class="block px-4 py-2 bg-[#674636]">Help</a></li>
+                </ul>
+            </nav>
+
+
+
+            <a href="applynow.html"><button
+                    class="hover:bg-[#EEEEEE] hover:text-[#A66E38] h-10 space-x-3 md:flex my-8 rounded-lg p-2 px-4 uppercase text-xs font-extrabold text-[#EEEEEE]   bg-[#A66E38]">
+                    <p class="my-auto md:text-[10px] text-[8px] ">apply now</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="md:size-5 my-auto   size-4">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                    </svg>
+
+                </button></a>
     </nav>
-
+    <!-- Header end -->
     <!-- Mainbody -->
     <div class="p-20 w-screen bg-[url(https://images.pexels.com/photos/9572389/pexels-photo-9572389.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)] bg-cover bg-no-repeat bg-center">
         <center>
@@ -47,42 +66,42 @@
                 <!-- Apply now form -->
                 <form action="#" method="POST" class="max-w-md mx-auto bg-opacity-80 p-6  rounded-lg shadow-lg bg-[#A66E38]">
                     <div class="mb-4">
-                        <label class="block text-start text-[#EEEEEE] text-lg font-bold mb-2" for="name">Full Name</label>
+                        <label class="block text-start text-[#EEEEEE] text-base md:text-lg font-bold mb-2" for="name">Full Name</label>
                         <input type="text" id="name" name="name" required
                             class="bg-[#FFEEAD] shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                             placeholder="John Doe">
                     </div>
 
                     <div class="mb-4">
-                        <label class="block text-start text-[#EEEEEE] text-lg font-bold mb-2" for="email">Email Address</label>
+                        <label class="block text-start text-[#EEEEEE] text-base md:text-lg font-bold mb-2" for="email">Email Address</label>
                         <input type="email" id="email" name="email" required
                             class="bg-[#FFEEAD] shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                             placeholder="you@example.com">
                     </div>
 
                     <div class="mb-4">
-                        <label class="block text-start text-[#EEEEEE] text-lg font-bold mb-2" for="phone">Phone Number</label>
+                        <label class="block text-start text-[#EEEEEE] text-base md:text-lg font-bold mb-2" for="phone">Phone Number</label>
                         <input type="tel" id="phone" name="phone" required
                             class="bg-[#FFEEAD] shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                             placeholder="(123) 456-7890">
                     </div>
 
                     <div class="mb-4">
-                        <label class="block text-start text-[#EEEEEE] text-lg font-bold mb-2" for="resume">Resume</label>
+                        <label class="block text-start text-[#EEEEEE] text-base md:text-lg font-bold mb-2" for="resume">Resume</label>
                         <input type="file" id="resume" name="resume" required
                             class="bg-[#FFEEAD] block w-full text-gray-700 border border-gray-300 rounded py-2 px-3 focus:outline-none focus:border-blue-500">
                     </div>
 
                     <div class="mb-4">
-                        <label class="block text-start text-[#EEEEEE] text-lg font-bold mb-2" for="coverLetter">Cover Letter</label>
+                        <label class="block text-start text-[#EEEEEE] text-base md:text-lg font-bold mb-2" for="coverLetter">Cover Letter</label>
                         <textarea id="coverLetter" name="coverLetter" required
                             class="bg-[#FFEEAD] shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                             rows="4" placeholder="Write your cover letter here..."></textarea>
                     </div>
-                    <div class="flex justify-around">
+                    <div class="flex justify-around text-sm md:text-base md:flex-row flex-col-reverse">
                         <a href="index.html"><button
                             type="submit"
-                            class="text-[#EEEEEE] flex space-x-2 bg-[#A66E38] px-6 py-3 my-5 rounded-full font-semibold hover:bg-[#EEEEEE] hover:text-[#A66E38]">
+                            class="text-[#EEEEEE] flex space-x-2  bg-[#A66E38] px-6 py-3 my-5 rounded-full font-semibold hover:bg-[#EEEEEE] hover:text-[#A66E38]">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               fill="none"
@@ -103,7 +122,7 @@
                         </a>
                         <button
                           type="submit"
-                          class="text-[#EEEEEE] bg-[#A66E38] px-6 py-3 my-5 rounded-full font-semibold hover:bg-[#EEEEEE] hover:text-[#A66E38]"
+                          class="text-[#EEEEEE] bg-[#A66E38] px-6 py-3 md:my-5 rounded-full font-semibold hover:bg-[#EEEEEE] hover:text-[#A66E38]"
                         >
                           Submit Application
                         </button>
